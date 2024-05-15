@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int k=1;
+    int m[7][7]={0};
+    printf("Enter the value: ");
+    scanf("%d",&k);
+    for(int i=1;i<=7;i++){
+        for(int j=1;j<=7;j++)
+            if(j==i || 8-i==j)
+            m[i-1][j-1]=k;
+            if(i<4)
+            k++;
+            else
+            --k;
+    }
+        for(int i=0;i<7;i++){
+            for(int j=0;j<7;j++){
+                if(m[i][j]==0)
+                printf(" ");
+                else
+                printf("%d",m[i][j]);
+            }
+            printf("\n");
+        }
+}
+
